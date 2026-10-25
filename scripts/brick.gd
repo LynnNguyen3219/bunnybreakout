@@ -10,8 +10,9 @@ func _process(delta: float) -> void:
 	pass
 
 func hit():
+	AudioController.play_broken()
 	GameManager.addPoints(1)
-	
+	$CPUParticles2D.emitting = true
 	$Sprite2D.visible = false
 	$CollisionShape2D.disabled = true
 	

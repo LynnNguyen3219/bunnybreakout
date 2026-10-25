@@ -49,6 +49,7 @@ texture = ExtResource("4_mx8sn")
 [node name="Boundary" type="Area2D" parent="." unique_id=1026033725]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" unique_id=663280970]
+z_index = -2
 position = Vector2(582, 719)
 shape = SubResource("RectangleShape2D_mx8sn")
 

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qal60iyfijdd"]
 
 [ext_resource type="Script" uid="uid://bpjs6vrm8okix" path="res://scripts/game_manager.gd" id="1_hwd4i"]
+[ext_resource type="FontFile" uid="uid://c5y1k87pa6gbt" path="res://fonts/PixelifySans-VariableFont_wght.ttf" id="2_glms7"]
 
 [node name="GameManager" type="Node" unique_id=572077967]
 script = ExtResource("1_hwd4i")
@@ -12,15 +13,17 @@ offset_left = 519.0
 offset_top = 603.0
 offset_right = 647.0
 offset_bottom = 645.0
+theme_override_fonts/font = ExtResource("2_glms7")
 theme_override_font_sizes/font_size = 30
 text = "0"
 horizontal_alignment = 1
 
 [node name="LevelLabel" type="Label" parent="CanvasLayer" unique_id=2019083165]
-offset_left = 913.0
-offset_top = 606.0
-offset_right = 1144.0
-offset_bottom = 656.0
+offset_left = 907.0
+offset_top = 607.0
+offset_right = 1138.0
+offset_bottom = 657.0
+theme_override_fonts/font = ExtResource("2_glms7")
 theme_override_font_sizes/font_size = 30
 text = "Level: 1"
 horizontal_alignment = 2

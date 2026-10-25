@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://0kq6kpiu5h8n"]
+
+[ext_resource type="Script" uid="uid://bxhlachestir4" path="res://scripts/music.gd" id="1_41o6r"]
+[ext_resource type="AudioStream" uid="uid://cqkw08a4xmw6u" path="res://audio/bpatrol.mp3" id="2_5dt40"]
+[ext_resource type="AudioStream" uid="uid://wryysru0u03l" path="res://audio/bunnycollide.mp3" id="3_6fhfa"]
+[ext_resource type="AudioStream" uid="uid://dldqwlwxsiyu5" path="res://audio/brickbreaking.mp3" id="4_vj1x0"]
+[ext_resource type="AudioStream" uid="uid://b4ukuftbcxgst" path="res://audio/uiconfirm.mp3" id="5_vj1x0"]
+
+[node name="AudioController" type="Node2D" unique_id=2111516732]
+script = ExtResource("1_41o6r")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1133906365]
+stream = ExtResource("2_5dt40")
+autoplay = true
+
+[node name="Collide" type="AudioStreamPlayer2D" parent="." unique_id=1163002599]
+stream = ExtResource("3_6fhfa")
+
+[node name="Broken" type="AudioStreamPlayer2D" parent="." unique_id=619029874]
+stream = ExtResource("4_vj1x0")
+
+[node name="Confirm" type="AudioStreamPlayer2D" parent="." unique_id=1171150114]
+stream = ExtResource("5_vj1x0")

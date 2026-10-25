@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="bunny breakout"
-run/main_scene="uid://otpubterbu8g"
+run/main_scene="uid://va238tlfm6lh"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*uid://qal60iyfijdd"
+AudioController="*uid://0kq6kpiu5h8n"
 
 [display]
 
