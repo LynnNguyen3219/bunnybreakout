@@ -2,11 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://clwqw3sjdu8ty" path="res://scenes/paddle.tscn" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://b8mihnqqnacgm" path="res://scenes/ball.tscn" id="1_w7c3h"]
+[ext_resource type="Script" uid="uid://cp3o7tb4g0mhq" path="res://scripts/level.gd" id="1_w8frs"]
+[ext_resource type="Texture2D" uid="uid://k230osdes46v" path="res://assets/background.png" id="4_mx8sn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kcgp"]
 size = Vector2(20.999962, 1168.7244)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
+size = Vector2(1133, 25)
+
 [node name="Level" type="Node2D" unique_id=1215064370]
+script = ExtResource("1_w8frs")
 
 [node name="Ball" parent="." unique_id=1157780291 instance=ExtResource("1_w7c3h")]
 position = Vector2(577, 324)
@@ -33,3 +39,17 @@ shape = SubResource("RectangleShape2D_5kcgp")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1915889272]
 position = Vector2(1161, 322)
 shape = SubResource("RectangleShape2D_5kcgp")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1609552109]
+z_index = -1
+position = Vector2(577.00006, 307)
+scale = Vector2(3.6722531, 3.1214254)
+texture = ExtResource("4_mx8sn")
+
+[node name="Boundary" type="Area2D" parent="." unique_id=1026033725]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" unique_id=663280970]
+position = Vector2(582, 719)
+shape = SubResource("RectangleShape2D_mx8sn")
+
+[connection signal="body_entered" from="Boundary" to="Ball" method="_on_boundary_body_entered"]

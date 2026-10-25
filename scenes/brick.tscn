@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d06c6emp5kim6"]
+
+[ext_resource type="Script" uid="uid://br5q8bj3ks6eo" path="res://scripts/brick.gd" id="1_0w5h4"]
+[ext_resource type="Texture2D" uid="uid://bpm307k82fmkd" path="res://assets/carrotbrick.png" id="2_7mekc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5kcgp"]
+radius = 15.0
+height = 56.0
+
+[node name="Brick" type="RigidBody2D" unique_id=1135041694 groups=["Brick"]]
+gravity_scale = 0.0
+script = ExtResource("1_0w5h4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=350284505]
+texture = ExtResource("2_7mekc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=148619075]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_5kcgp")
